@@ -1,0 +1,29 @@
+<div class="body">
+  <div class="container body__container">
+
+      {% if (is_node and node.getType() in ['services']) %}
+      <aside class="body_first" role="complementary">
+        I WANT YOU
+      </aside>
+      {% endif %}
+
+      <section class="body_content">
+        {{ page.content }}
+      </section>
+
+      <aside id="asesoria" class="body_second" role="complementary">
+        <div class="form__container">
+          {% if (is_node and node.getType() in ['services']) %}
+          <h3 class="form_title">¿Buscas asesoría sobre {{ page['#title'] }}?</h3>
+          {% else %}
+          <h3 class="form_title">¿Buscas asesoría?</h3>
+          {% endif %}
+          <p class="form_text">Envíanos tus datos, te responderemos pronto.</p>
+          {#{ drupal_form('Drupal\\munayco_contact\\Form\\MunaycoContactForm') }#}
+          <small class="form_small">Los datos enviados no se recopilaran para marketing o estudio.</small>
+          <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta nuestros Términos y Políticas</small>
+        </div>
+      </aside>
+
+  </div>
+</div>

@@ -1,11 +1,18 @@
 uuid: 8580767a-dcbc-42f3-9456-c333adb2de4c
-langcode: en
+langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: iTEzwrEQ_4JIb-OYGiqzyF2TmMgWyWayresXcWgwGWM
-name: Tags
+name: Categorías
 vid: tags
-description: 'Use tags to group articles on similar topics into categories.'
+description: 'Utilice etiquetas para agrupar artículos sobre temas similares en categorías.'
 weight: 0
 new_revision: false

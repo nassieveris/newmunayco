@@ -1,9 +1,9 @@
 _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
-langcode: en
+langcode: es
 uuid: c1a64704-b529-4698-a3b2-2d2b6006f01e
-name: 'Drush Site-Install'
-mail: admin@example.com
+name: 'Maria Munayco Consulting'
+mail: pablo.nassi@gmail.com
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,5 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-default_langcode: en
+default_langcode: es
 mail_notification: null

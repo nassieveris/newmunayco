@@ -1,0 +1,22 @@
+uuid: 0c5056a9-514e-425e-b24c-df663d85f889
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - akw
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: akw_help
+theme: akw
+region: disabled
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

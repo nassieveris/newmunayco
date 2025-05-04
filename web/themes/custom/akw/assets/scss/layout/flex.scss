@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  &_one {
+    flex: 1;
+  }
+  &_inline {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+  }
+  &_column {
+    display: flex;
+    flex-direction: column;
+  }
+}

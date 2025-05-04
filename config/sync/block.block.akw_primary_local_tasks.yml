@@ -1,0 +1,22 @@
+uuid: 0cdcd2a9-0635-463d-8a88-e3c08a0ed2c8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - akw
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: akw_primary_local_tasks
+theme: akw
+region: primary_menu
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

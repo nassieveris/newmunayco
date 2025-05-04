@@ -1,0 +1,23 @@
+uuid: 94907d69-3712-45a8-b81a-c3bc2001343f
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - akw
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: akw_search_form_narrow
+theme: akw
+region: disabled
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulario de búsqueda (estrecho)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

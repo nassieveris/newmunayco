@@ -1,0 +1,20 @@
+uuid: aeee7cd7-1d54-4790-8135-3f2999eb1817
+langcode: en
+status: true
+dependencies:
+  theme:
+    - akw
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: akw_page_title
+theme: akw
+region: disabled
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

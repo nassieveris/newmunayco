@@ -1,0 +1,19 @@
+uuid: e4e99bd8-6a76-4e2d-9737-cfec289b3923
+langcode: es
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.field_sd_logotipo
+field_name: field_sd_logotipo
+entity_type: config_pages
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

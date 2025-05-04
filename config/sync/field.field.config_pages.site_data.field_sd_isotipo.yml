@@ -1,0 +1,19 @@
+uuid: af8297a3-084e-4f5b-87ad-d566e86e9e3b
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_data
+    - field.storage.config_pages.field_sd_isotipo
+id: config_pages.site_data.field_sd_isotipo
+field_name: field_sd_isotipo
+entity_type: config_pages
+bundle: site_data
+label: Isotipo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

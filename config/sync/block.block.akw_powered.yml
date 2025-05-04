@@ -1,0 +1,22 @@
+uuid: d44ecf15-a723-4044-a810-2ee0c5882d9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - akw
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: akw_powered
+theme: akw
+region: disabled
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

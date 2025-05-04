@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container flex header__container">
+    {% set logo_tag = is_front ? 'h1' : 'div' %}
+    <{{ logo_tag }} id="logo" class="logo">
+        <a class="logo_link" href="{{ path('<front>') }}">
+          {% if isotipo %}
+            {{ isotipo|raw }}
+          {% endif %}
+          {% if logotipo %}
+            {{ logotipo|raw }}
+          {% endif %}
+        </a>
+    </{{ logo_tag }}>
+    {{ drupal_menu('main') }}
+    {{ drupal_menu('header') }}
+    <button id="headerBurger" class="header__burger">
+      <span><span class="material-symbols-outlined">&#xe5d2;</span><span class="material-symbols-outlined">&#xe5cd;</span></span>
+      <span><span class="text">Menu</span><span class="text">Cerrar</span></span>
+    </button>
+  </div>
+</header>

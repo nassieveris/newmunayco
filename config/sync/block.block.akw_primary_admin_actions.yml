@@ -1,0 +1,20 @@
+uuid: 7b80f179-0d56-426b-a7b4-caecee6907a2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - akw
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: akw_primary_admin_actions
+theme: akw
+region: primary_menu
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 19979067-e2ac-424b-a4e5-65dc50c8e1ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - akw
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: akw_site_branding
+theme: akw
+region: disabled
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,13 @@
+{% if (is_node and node.field_summary.value) %}
+  <div class="body__summary"><p>{{ node.field_summary.value|raw }}</p></div>
+{% endif %}
+{% if (is_node and node.body.value) %}
+  <div class="body__article">{{ node.body.value|raw }}</div>
+{% endif %}
+{% if (is_node and node.field_document.value) %}
+  {% for file in node.field_document %}
+  <button class="button" onclick="window.open('{{ file_url(node.field_document.entity.field_media_document.entity.fileuri) }}', '_blank')">
+    <span class="material-symbols-outlined">&#xe873;</span>{{ file.entity.field_media_document.description }}
+  </button>
+  {% endfor %}
+{% endif %}
