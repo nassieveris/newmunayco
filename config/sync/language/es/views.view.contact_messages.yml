@@ -27,8 +27,6 @@ display:
         subject:
           label: Asunto
           separator: ', '
-        name:
-          separator: ', '
         contact_form_label:
           label: 'Formulario de contacto'
         created:

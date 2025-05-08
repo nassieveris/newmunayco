@@ -1,0 +1,22 @@
+uuid: 67a2c690-c32f-42af-a103-21f479f4e596
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: nodo_servicios
+label: 'Nodo Servicios'
+type: 'canonical_entities:node'
+pattern: '/[node:field_type_service:entity:name]/[node:title]'
+selection_criteria:
+  b0ab181f-db96-44cb-9b58-98cc28328e21:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: b0ab181f-db96-44cb-9b58-98cc28328e21
+    context_mapping:
+      node: node
+    bundles:
+      services: services
+selection_logic: and
+weight: -5
+relationships: {  }

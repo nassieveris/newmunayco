@@ -3,6 +3,6 @@ langcode: es
 status: true
 dependencies: {  }
 id: header
-label: Header
-description: ''
+label: 'Navegación Secundaria'
+description: 'Enlaces Secundarios - No SEO'
 locked: false

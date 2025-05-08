@@ -1,11 +1,15 @@
+{% include "@akw/sections/header.html.twig" ignore missing %}
 
-  {% include "@akw/sections/header.html.twig" ignore missing %}
+{% include "@akw/sections/main.html.twig" ignore missing %}
 
-  {% include "@akw/sections/main.html.twig" ignore missing %}
+{# Debugging the variable munayco_prefooter #}
+{% if munayco_prefooter is defined %}
+  {{ munayco_prefooter }}
+{% endif %}
 
-  {% include "@akw/sections/footer.html.twig" ignore missing %}
+{% include "@akw/sections/footer.html.twig" ignore missing %}
 
-  {% include "@akw/sections/burger.html.twig" ignore missing %}
+{% include "@akw/sections/burger.html.twig" ignore missing %}
 
 
 {#}

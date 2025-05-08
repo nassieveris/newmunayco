@@ -1,0 +1,6 @@
+name: 'Munayco Blocks'
+type: module
+description: 'Provides ornamental blocks for the Munayco site.'
+core_version_requirement: ^11
+php: ^8.4
+package: Custom

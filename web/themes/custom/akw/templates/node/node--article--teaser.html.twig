@@ -1,0 +1,10 @@
+<a href="{{ url }}" class="teaser">
+  <div class="teaser__data">
+    <small class="teaser_date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</small>
+    <h3 class="teaser_title">{{ node.title.value }}</h3>
+  </div>
+  <div class="teaser__call">
+    <span class="material-symbols-outlined"></span>
+    <span>Leer más detalles</span>
+  </div>
+</a>

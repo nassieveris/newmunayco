@@ -26,9 +26,13 @@
   {% endif %}
 
   {% if (is_node and node.getType() in ['services', 'article']) %}
-    {% include "@akw/sections/body.html.twig" ignore missing %}
+    {% include "@akw/body/columns.html.twig" ignore missing %}
+  {% elseif (is_node and node.getType() in ['system']) %}
+    {% include "@akw/body/multiple.html.twig" ignore missing %}
+  {% elseif is_node %}
+    {% include "@akw/body/body.html.twig" ignore missing %}
   {% else %}
-    {{ page.content }}
+    {% include "@akw/body/simple.html.twig" ignore missing %}
   {% endif %}
 
 </main>

@@ -1,0 +1,49 @@
+uuid: 495cc6e0-f944-4bcc-8fdb-80f8438bc8a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.field.contact_message.feedback.field_frm_phone
+id: contact_message.feedback.default
+targetEntityType: contact_message
+bundle: feedback
+mode: default
+content:
+  field_frm_phone:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: 'Ej: 999888999'
+    third_party_settings: {  }
+  mail:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 12
+      placeholder: 'Ej: Hola Munayco Consulting necesitamos ...'
+    third_party_settings: {  }
+  name:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  preview: true

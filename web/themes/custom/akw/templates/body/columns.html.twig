@@ -19,7 +19,8 @@
           <h3 class="form_title">¿Buscas asesoría?</h3>
           {% endif %}
           <p class="form_text">Envíanos tus datos, te responderemos pronto.</p>
-          {#{ drupal_form('Drupal\\munayco_contact\\Form\\MunaycoContactForm') }#}
+          {{ drupal_entity('contact_form', 'feedback') }}
+          <small class="form_small">Todos los campos son obligatorios.</small>
           <small class="form_small">Los datos enviados no se recopilaran para marketing o estudio.</small>
           <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta nuestros Términos y Políticas</small>
         </div>
@@ -27,3 +28,4 @@
 
   </div>
 </div>
+

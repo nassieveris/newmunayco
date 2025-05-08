@@ -1,0 +1,24 @@
+uuid: d223662a-3812-4b9e-a633-350feff1de54
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+  module:
+    - contact_block
+  theme:
+    - akw
+id: akw_feedback
+theme: akw
+region: disabled
+weight: 0
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  label_display: '0'
+  provider: contact_block
+  contact_form: feedback
+  form_display: default
+visibility: {  }

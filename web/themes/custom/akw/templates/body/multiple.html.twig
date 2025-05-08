@@ -1,0 +1,54 @@
+{% if node.field_type_system.value in ['system_bio', 'system_consultoria'] %}
+<div class="body">
+  <div class="container body__container">
+    <article class="body__article">
+      {{ page.content }}
+    </article>
+  </div>
+</div>
+{% endif %}
+{% if node.field_type_system.value == 'system_bio' %}
+  {{ munayco_2consultoria }}
+{% elseif node.field_type_system.value == 'system_consultoria' %}
+  <div class="blocks blocks__consultoria">
+    <div class="container">
+      <h3 class="blocks__title"><span>Ellos confían en Nosotros</span></h3>
+      <div class="marquee-container">
+  <div class="marquee-content">
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
+  </div>
+</div>
+    </div>
+  {{ munayco_2maria }}
+{% elseif node.field_type_system.value == 'system_home' %}
+  <section class="blocks blocks__news">
+    <div class="container">
+      <h3 class="blocks__title"><span>Noticias</span></h3>
+      {{ drupal_view('noticias', 'noticias_home') }}
+    </div>
+  </section>
+{% endif %}
+
+<style>.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style>

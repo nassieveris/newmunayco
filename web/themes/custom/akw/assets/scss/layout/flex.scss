@@ -15,3 +15,17 @@
     flex-direction: column;
   }
 }
+
+[class*='cols-'] {
+  display: flex;
+  flex-flow: row wrap;
+  gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
+}
+.cols- {
+  &2 > * {
+    flex: 1;
+    @media (max-width: 599px) {
+      flex: 100%;
+    }
+  }
+}

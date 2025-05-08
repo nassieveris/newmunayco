@@ -23,3 +23,26 @@
     font-weight: 700;
   }
 }
+
+.button {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 0;
+    padding: .5rem;
+    border-radius: 2rem;
+    background-color: rgb(230, 240, 225);
+    color: #007133;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .25s color ease-in-out, .25s background-color ease-in-out;
+    &:hover {
+      color: rgb(230, 240, 225);
+      background-color: #007133;
+    }
+  [class*='body'] + & {
+    margin-top: 1rem;
+  }
+}

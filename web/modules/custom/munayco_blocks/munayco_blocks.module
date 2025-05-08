@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Munayco Blocks module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function munayco_blocks_theme() {
+  return [
+    'munayco_prefooter' => [
+      'variables' => [],
+    ],
+    'munayco_2maria' => [
+      'variables' => [],
+    ],
+    'munayco_2consultoria' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function munayco_blocks_preprocess_page(&$variables) {
+  $block = \Drupal::service('plugin.manager.block')->createInstance('munayco_prefooter');
+  $rendered_block = $block->build();
+  $variables['munayco_prefooter'] = \Drupal::service('renderer')->render($rendered_block);
+}

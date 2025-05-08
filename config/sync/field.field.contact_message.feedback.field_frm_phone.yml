@@ -1,0 +1,23 @@
+uuid: a12d515f-6b81-448b-8067-cfde47ebdec0
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_frm_phone
+id: contact_message.feedback.field_frm_phone
+field_name: field_frm_phone
+entity_type: contact_message
+bundle: feedback
+label: Teléfono
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1111111
+  max: 999999999
+  prefix: ''
+  suffix: ''
+field_type: integer

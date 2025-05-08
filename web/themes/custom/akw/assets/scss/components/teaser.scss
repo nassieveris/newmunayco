@@ -1,0 +1,42 @@
+.teaser {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-flow: row wrap;
+  padding-block: 1rem;
+  background: white;
+  padding-inline: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #dadada;
+  transition: .25s background-color;
+  &__data {
+    flex: 2;
+    color: #787979;
+  }
+  &__call {
+    flex: .5;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: hsl(100deg,51%,40%);
+    span:first-child {
+      font-size: 32px;
+    }
+    span:last-child {
+      font-size: 60%;
+    }
+  }
+  &_title {
+    line-height: 1.25;
+    font-weight: 400;
+    color: #007133;
+  }
+  &:hover {
+    background-color: #fafafa;
+  }
+}

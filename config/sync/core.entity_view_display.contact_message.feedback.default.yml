@@ -1,0 +1,54 @@
+uuid: 65fe8875-8308-40e7-8fea-93be04bd00da
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.field.contact_message.feedback.field_frm_phone
+id: contact_message.feedback.default
+targetEntityType: contact_message
+bundle: feedback
+mode: default
+content:
+  field_frm_phone:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  subject:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden:
+  langcode: true

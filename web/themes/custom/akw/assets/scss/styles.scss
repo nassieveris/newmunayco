@@ -10,11 +10,15 @@
 @use 'sections/hero' as hero;
 @use 'sections/body' as body;
 
-@use 'components/title' as title;
-@use 'components/buttons' as btns;
 @use 'components/forms' as forms;
-@use 'components/badge' as badge;
 @use 'components/share' as share;
-@use 'components/tables' as tables;
+@use 'components/teaser' as tea;
+
+@use 'elements/title' as title;
+@use 'elements/buttons' as btns;
+@use 'elements/badge' as badge;
+@use 'elements/tables' as tables;
+
+@use 'blocks/munayco' as munayco;
 
 @use 'admin/tasks' as tasks;

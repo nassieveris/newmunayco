@@ -162,8 +162,10 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: cols_2
       header: {  }
       footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -173,13 +175,45 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  noticias_home:
+    id: noticias_home
+    display_title: 'B: Home'
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 2
+      defaults:
+        pager: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   page_1:
     id: page_1
     display_title: Page
     display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
+      defaults:
+        header: false
+      header: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: noticias
     cache_metadata:
       max-age: -1

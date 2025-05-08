@@ -1,0 +1,74 @@
+uuid: fee45122-2e3d-4f37-a649-1cd319fd7355
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.system.field_col_1
+    - field.field.node.system.field_col_2
+    - field.field.node.system.field_include_banner
+    - field.field.node.system.field_subtitle
+    - field.field.node.system.field_summary
+    - field.field.node.system.field_type_system
+    - node.type.system
+  module:
+    - options
+    - text
+    - user
+id: node.system.default
+targetEntityType: node
+bundle: system
+mode: default
+content:
+  field_col_1:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_col_2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_include_banner:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_type_system:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

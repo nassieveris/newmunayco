@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  [handleBurgerMenu, updateMenuClasses].forEach(fn => fn());
+  [handleBurgerMenu, updateMenuClasses, populateSubjectField].forEach(fn => fn());
 });
 
 const handleBurgerMenu = () => {
@@ -58,8 +58,12 @@ const updateMenuClasses = () => {
   burger.querySelector('.header__menu')?.classList.replace('header__menu', 'burger__menu_super');
 };
 
-/*const populateSubjectField = () => {
-  const subjectField = document.querySelector('input[name="subject"]');
-  subjectField?.value = document.title.split('|')[0]?.trim() ?? '';
-  subjectField && (subjectField.readOnly = true);
-};*/
+const populateSubjectField = () => {
+  const formExists = document.querySelector('form.contact-message-feedback-form');
+  if (!formExists) return;
+  const subjectField = document.querySelector('input[name="subject[0][value]"]');
+  if (subjectField) {
+    subjectField.value = document.title.split('|')[0]?.trim() ?? '';
+    subjectField.readOnly = true;
+  }
+};

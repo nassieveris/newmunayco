@@ -1,0 +1,22 @@
+uuid: 9d03864b-d59f-4dd0-9cdf-e9b03b524cfe
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: nodo_basicas
+label: 'Nodo Basicas'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  5112de16-2f2c-4c5c-8f83-8fa55f5d8b89:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 5112de16-2f2c-4c5c-8f83-8fa55f5d8b89
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

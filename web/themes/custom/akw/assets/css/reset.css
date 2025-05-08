@@ -79,9 +79,6 @@ fieldset {
 input, button, textarea, select {
   font: inherit;
 }
-input, textarea, select {
-  width: 100%
-}
 
 .visually-hidden,
 .hidden,
@@ -124,6 +121,10 @@ input, textarea, select {
   .logo_link svg:last-child {
     display: none;
   }
+}
+
+#edit-subject-wrapper {
+  display: none;
 }
 
 /*# sourceMappingURL=reset.css.map */

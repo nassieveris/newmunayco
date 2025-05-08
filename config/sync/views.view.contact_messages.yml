@@ -77,6 +77,185 @@ display:
           action_title: 'Con selección'
           include_exclude: exclude
           selected_actions: {  }
+        contact_form_label:
+          id: contact_form_label
+          table: contact_message
+          field: contact_form_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: contact_message
+          plugin_id: contact_form
+          label: 'Formulario de contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        name_1:
+          id: name_1
+          table: contact_message
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: contact_message
+          entity_field: name
+          plugin_id: field
+          label: Nombres
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        mail:
+          id: mail
+          table: contact_message
+          field: mail
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: contact_message
+          entity_field: mail
+          plugin_id: field
+          label: Mail
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         subject:
           id: subject
           table: contact_message
@@ -142,17 +321,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        name:
-          id: name
+        message:
+          id: message
           table: contact_message
-          field: name
+          field: message
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: contact_message
-          entity_field: name
+          entity_field: message
           plugin_id: field
-          label: "Sender's name"
+          label: Mensaje
           exclude: false
           alter:
             alter_text: false
@@ -194,9 +373,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -207,56 +385,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        contact_form_label:
-          id: contact_form_label
-          table: contact_message
-          field: contact_form_label
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: contact_message
-          plugin_id: contact_form
-          label: 'Formulario de contacto'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
         created:
           id: created
           table: contact_message

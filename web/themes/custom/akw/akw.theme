@@ -75,40 +75,158 @@ function akw_preprocess(array &$variables, $hook) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function akw_preprocess_page(&$variables) {
+  if (\Drupal::moduleHandler()->moduleExists('munayco_blocks')) {
+    // Process the Munayco Prefooter block.
+    $prefooter_block = \Drupal::service('plugin.manager.block')->createInstance('munayco_prefooter');
+    $rendered_prefooter = $prefooter_block->build();
+    $variables['munayco_prefooter'] = !empty($rendered_prefooter)
+      ? \Drupal::service('renderer')->render($rendered_prefooter)
+      : '<div class="debug">Munayco Prefooter block is empty.</div>';
+
+    // Process the Munayco 2Maria block.
+    $maria_block = \Drupal::service('plugin.manager.block')->createInstance('munayco_2maria');
+    $rendered_maria = $maria_block->build();
+    $variables['munayco_2maria'] = !empty($rendered_maria)
+      ? \Drupal::service('renderer')->render($rendered_maria)
+      : '<div class="debug">Munayco 2Maria block is empty.</div>';
+
+    // Process the Munayco 2Consultoria block.
+    $consultoria_block = \Drupal::service('plugin.manager.block')->createInstance('munayco_2consultoria');
+    $rendered_consultoria = $consultoria_block->build();
+    $variables['munayco_2consultoria'] = !empty($rendered_consultoria)
+      ? \Drupal::service('renderer')->render($rendered_consultoria)
+      : '<div class="debug">Munayco 2Consultoria block is empty.</div>';
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function akw_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  // Target the "contacto" contact form.
-  if ($form_id === 'contact_message_contacto_form') {
-    // Remove the required property for all fields.
-    if (isset($form['subject']['#required'])) {
-      $form['subject']['#required'] = FALSE;
-    }
-    if (isset($form['name']['#required'])) {
-      $form['name']['#required'] = FALSE;
-    }
-    if (isset($form['message']['#required'])) {
-      $form['message']['#required'] = FALSE;
-    }
-    if (isset($form['mail']['#required'])) {
-      $form['mail']['#required'] = FALSE;
+
+  // Add the "form__table" class to the "feedback" contact form.
+  if ($form_id === 'contact_message_feedback_form') {
+    $form['#attributes']['class'][] = 'form__table';
+
+    // Change the label "Su nombre" to "Nombres y Apellidos".
+    if (isset($form['name']['#title'])) {
+      $form['name']['#title'] = 'Nombres y Apellidos';
     }
 
-    // Ensure default values for all fields to avoid null values.
-    if (!isset($form['subject']['#default_value'])) {
-      $form['subject']['#default_value'] = '';
-    }
-    if (!isset($form['message']['#default_value'])) {
-      $form['message']['#default_value'] = '';
-    }
-    if (isset($form['mail']) && !isset($form['mail']['#default_value'])) {
-      $form['mail']['#default_value'] = '';
-    }
-    if (isset($form['name']) && !isset($form['name']['#default_value'])) {
-      $form['name']['#default_value'] = '';
+    // Change the label "Su dirección de correo electrónico" to "Correo Electrónico".
+    if (isset($form['mail']['#title'])) {
+      $form['mail']['#title'] = 'Correo Electrónico';
     }
 
-    // Add a custom submit handler to ensure proper handling of empty values.
-    $form['#submit'][] = 'akw_contacto_form_submit';
+    // Add placeholder to the "name" field.
+    if (isset($form['name'])) {
+      if (!isset($form['name']['#attributes'])) {
+        $form['name']['#attributes'] = [];
+      }
+      $form['name']['#attributes']['placeholder'] = 'Ej: Gia Brunela';
+    }
+
+    // Add placeholder to the "mail" field.
+    if (isset($form['mail'])) {
+      if (!isset($form['mail']['#attributes'])) {
+        $form['mail']['#attributes'] = [];
+      }
+      $form['mail']['#attributes']['placeholder'] = 'Ej: mimail@correo.pe';
+    }
+  }
+
+  // Recursively add the required classes to all form elements.
+  akw_add_classes_to_form($form);
+
+  // Recursively add the "form_submit" class to all submit buttons.
+  akw_add_submit_class($form);
+}
+
+/**
+ * Recursively updates the label of a specific field in a form.
+ *
+ * @param array &$form
+ *   The form array to process.
+ * @param string $field_name
+ *   The name of the field to update.
+ * @param string $new_label
+ *   The new label to set.
+ */
+function akw_update_field_label(array &$form, $field_name, $new_label) {
+  foreach ($form as $key => &$element) {
+    if (is_array($element)) {
+      // Check if the current element matches the field name and update its label.
+      if (isset($element['#type']) && $key === $field_name && isset($element['#title'])) {
+        $element['#title'] = $new_label;
+        return;
+      }
+      // Recurse into child elements.
+      akw_update_field_label($element, $field_name, $new_label);
+    }
+  }
+}
+
+/**
+ * Recursively adds the "form_item", "form_div_item", and "form_label" classes to form elements.
+ *
+ * @param array &$form
+ *   The form array to process.
+ */
+function akw_add_classes_to_form(array &$form) {
+  foreach ($form as &$element) {
+    if (is_array($element)) {
+      // Add the "form_item" class to input elements.
+      if (isset($element['#type']) && in_array($element['#type'], ['textfield', 'textarea', 'email', 'number', 'password', 'tel', 'url'])) {
+        if (!isset($element['#attributes']['class'])) {
+          $element['#attributes']['class'] = [];
+        }
+        $element['#attributes']['class'][] = 'form_item';
+      }
+
+      // Add the "form_label" class to labels by modifying #title.
+      if (isset($element['#title']) && isset($element['#type']) && $element['#type'] !== 'hidden') {
+        $element['#title'] = '<span class="form_label">' . $element['#title'] . '</span>';
+      }
+
+      // Add the "form_div_item" class to wrappers.
+      if (isset($element['#type']) && $element['#type'] !== 'hidden') {
+        if (!isset($element['#wrapper_attributes']['class'])) {
+          $element['#wrapper_attributes']['class'] = [];
+        }
+        $element['#wrapper_attributes']['class'][] = 'form_div_item';
+      }
+
+      // Recurse into child elements.
+      if (!empty($element) && is_array($element)) {
+        akw_add_classes_to_form($element);
+      }
+    }
+  }
+}
+
+/**
+ * Recursively adds the "form_submit" class to all submit buttons in a form.
+ *
+ * @param array &$form
+ *   The form array to process.
+ */
+function akw_add_submit_class(array &$form) {
+  foreach ($form as &$element) {
+    if (is_array($element)) {
+      // Check if the element is a submit button.
+      if (isset($element['#type']) && $element['#type'] === 'submit') {
+        if (!isset($element['#attributes']['class'])) {
+          $element['#attributes']['class'] = [];
+        }
+        $element['#attributes']['class'][] = 'form_submit';
+      }
+      // Recurse into child elements.
+      if (!empty($element) && is_array($element)) {
+        akw_add_submit_class($element);
+      }
+    }
   }
 }

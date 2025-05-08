@@ -45,6 +45,9 @@
     border-radius: 0 .5rem .5rem .5rem;
     font-weight: 700;
     font-size: 16px;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
   }
   &_submit {
     background-color: hsl(100deg,51%,40%);
@@ -53,8 +56,14 @@
     margin-block: 1rem;
     transition: .2s background-color;
     cursor: pointer;
+    width: 100%;
+    padding: .5rem;
+    border: 0;
     &:hover {
       background-color: hsl(100deg,51%,40%,.8);
     }
+  }
+  &-textarea {
+    max-height: 150px;
   }
 }
