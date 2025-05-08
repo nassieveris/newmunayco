@@ -1,0 +1,25 @@
+diff --git a/core/lib/Drupal/Component/Render/FormattableMarkup.php b/core/lib/Drupal/Component/Render/FormattableMarkup.php
+index 6db6288d47d..11b568a50e1 100644
+--- a/core/lib/Drupal/Component/Render/FormattableMarkup.php
++++ b/core/lib/Drupal/Component/Render/FormattableMarkup.php
+@@ -235,6 +235,7 @@ protected static function placeholderFormat($string, array $args) {
+    *   The properly escaped replacement value.
+    */
+   protected static function placeholderEscape($value) {
++    $value = $value ?? '';
+     return $value instanceof MarkupInterface ? (string) $value : Html::escape($value);
+   }
+ 
+diff --git a/core/lib/Drupal/Component/Utility/Html.php b/core/lib/Drupal/Component/Utility/Html.php
+index 193f01b21fa..c103bbc869b 100644
+--- a/core/lib/Drupal/Component/Utility/Html.php
++++ b/core/lib/Drupal/Component/Utility/Html.php
+@@ -428,7 +428,7 @@ public static function decodeEntities(string $text): string {
+    *
+    * @ingroup sanitization
+    */
+-  public static function escape(string $text): string {
++  public static function escape(string $text = ''): string {
+     return htmlspecialchars($text, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+   }
+ 

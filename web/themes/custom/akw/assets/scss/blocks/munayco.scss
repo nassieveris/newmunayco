@@ -1,8 +1,10 @@
 .blocks {
-  padding-top: 15vh;
-  padding-bottom: 20vh;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
   text-align: center;
   &__prefooter {
+    padding-top: 15vh;
+    padding-bottom: 20vh;
     clip-path: polygon(50% 10%,100% 0,100% 100%,0 100%,0 0);
     background-color: #eeeed8;
   }
@@ -17,6 +19,9 @@
     max-width: 600px;
     line-height: 1.05;
     margin-inline: auto;
+    .blocks__creemos & {
+      color: wheat;
+    }
     > span {
       border-bottom: 3px solid ;
       position: relative;
@@ -35,6 +40,10 @@
         transform: rotate(45deg);
         -webkit-box-shadow: .8rem 0 0 #559b32, 0 .8rem 0 #007133;
         box-shadow: .8rem 0 0 #559b32, 0 .8rem 0 #007133;
+        .blocks__creemos & {
+          background: white;
+          box-shadow: 0.8rem 0 0 rgba(255,255,255,.5), 0 0.8rem 0 rgba(255,255,255,.75);
+        }
       }
     }
   }
@@ -56,6 +65,14 @@
     text-align: left;
     margin-top: 2rem;
   }
+  &__creemos {
+    background-color: hsl(147deg,100%,22%);
+    color: white;
+  }
+  &__logos {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+  }
   &__consultoria,
   &__maria {
     background-image: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 85%, rgba(230, 230, 230, 1) 100%);
@@ -66,5 +83,54 @@
   .btn span {
     position: relative;
     z-index: 2;
+  }
+}
+
+.sub_block {
+  &s{
+    margin-top: 3rem;
+  }
+  &__title {
+    font-family: "DM Serif Text",serif;
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+}
+
+.marquee {
+  width: 100%;
+  gap: 4rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  overflow: hidden;
+  &_content {
+    min-width: 100%;
+    gap: 4rem;
+    flex: none;
+    justify-content: space-around;
+    display: flex;
+    animation-direction: reverse;
+    animation: scroll 10s linear infinite;
+    align-items: center;
+  }
+  &_overflow {
+    margin-top: 1rem;
+  }
+  figure,
+  img {
+    -webkit-transform: translateZ(0);
+    max-width: 150px;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
   }
 }

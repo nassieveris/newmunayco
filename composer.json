@@ -79,6 +79,9 @@
             }
         },
         "patches": {
+            "drupal/core": {
+                "Undefined array key 'drupalSettings'": "patches/entity.patch"
+            },
             "drupal/twig_tweak": {
                 "PHP 8.4 deprecated": "https://www.drupal.org/files/issues/2025-04-14/3500245-8.patch"
             },
@@ -96,6 +99,9 @@
             },
             "drupal/taxonomy_menu_ui": {
                 "Menu entity bundle deprecation": "https://www.drupal.org/files/issues/2025-04-07/taxonomy_menu_ui-menu_bundle_name-3501383-8.patch"
+            },
+            "drupal/entity_browser": {
+                "Null given in key": "https://www.drupal.org/files/issues/2024-04-15/entity_browser-3440973.patch"
             }
         },
         "installer-paths": {

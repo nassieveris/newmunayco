@@ -28,4 +28,16 @@
       flex: 100%;
     }
   }
+  &3 > * {
+    flex: 1;
+    @media (max-width: 699px) {
+      flex: 100%;
+    }
+  }
+  &4 > * {
+    flex: 1;
+    @media (max-width: 799px) {
+      flex: 100%;
+    }
+  }
 }

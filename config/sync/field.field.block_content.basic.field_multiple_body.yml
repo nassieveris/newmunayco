@@ -1,0 +1,31 @@
+uuid: d18c0eab-adb1-4e01-a2c3-b187485434f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_multiple_body
+    - paragraphs.paragraphs_type.base
+  module:
+    - entity_reference_revisions
+id: block_content.basic.field_multiple_body
+field_name: field_multiple_body
+entity_type: block_content
+bundle: basic
+label: 'Cuerpo Multiple'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      base: base
+    negate: 0
+    target_bundles_drag_drop:
+      base:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

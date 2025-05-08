@@ -1,0 +1,41 @@
+uuid: 3cc9b3d7-0580-43ea-95cd-7ab4d6e12b02
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - entity_browser.browser.entity_imagenes
+    - field.field.block_content.images.body
+    - field.field.block_content.images.field_basic_img
+  module:
+    - entity_browser
+id: block_content.images.default
+targetEntityType: block_content
+bundle: images
+mode: default
+content:
+  field_basic_img:
+    type: entity_browser_entity_reference
+    weight: 1
+    region: content
+    settings:
+      entity_browser: entity_imagenes
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

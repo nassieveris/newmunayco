@@ -1,0 +1,8 @@
+uuid: 9a0e0c27-a535-4a25-a68e-7d48077e3946
+langcode: es
+status: true
+dependencies: {  }
+id: images
+label: 'Bloque de Imagenes'
+revision: false
+description: null

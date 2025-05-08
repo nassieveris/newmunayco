@@ -36,6 +36,22 @@
     flex: 100%;
   }
 }
+.cols-3 > * {
+  flex: 1;
+}
+@media (max-width: 699px) {
+  .cols-3 > * {
+    flex: 100%;
+  }
+}
+.cols-4 > * {
+  flex: 1;
+}
+@media (max-width: 799px) {
+  .cols-4 > * {
+    flex: 100%;
+  }
+}
 
 a {
   position: relative;
@@ -843,11 +859,13 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .blocks {
-  padding-top: 15vh;
-  padding-bottom: 20vh;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
   text-align: center;
 }
 .blocks__prefooter {
+  padding-top: 15vh;
+  padding-bottom: 20vh;
   clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #eeeed8;
 }
@@ -862,6 +880,9 @@ tbody, td, tfoot, th, thead, tr {
   max-width: 600px;
   line-height: 1.05;
   margin-inline: auto;
+}
+.blocks__creemos .blocks__title {
+  color: wheat;
 }
 .blocks__title > span {
   border-bottom: 3px solid;
@@ -883,6 +904,10 @@ tbody, td, tfoot, th, thead, tr {
   -webkit-box-shadow: 0.8rem 0 0 #559b32, 0 0.8rem 0 #007133;
   box-shadow: 0.8rem 0 0 #559b32, 0 0.8rem 0 #007133;
 }
+.blocks__creemos .blocks__title > span::before {
+  background: white;
+  box-shadow: 0.8rem 0 0 rgba(255, 255, 255, 0.5), 0 0.8rem 0 rgba(255, 255, 255, 0.75);
+}
 .blocks__text {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
@@ -901,6 +926,14 @@ tbody, td, tfoot, th, thead, tr {
   text-align: left;
   margin-top: 2rem;
 }
+.blocks__creemos {
+  background-color: hsl(147, 100%, 22%);
+  color: white;
+}
+.blocks__logos {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
 .blocks__consultoria, .blocks__maria {
   background-image: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(242, 242, 242) 85%, rgb(230, 230, 230) 100%);
 }
@@ -912,6 +945,53 @@ tbody, td, tfoot, th, thead, tr {
   z-index: 2;
 }
 
+.sub_blocks {
+  margin-top: 3rem;
+}
+.sub_block__title {
+  font-family: "DM Serif Text", serif;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.marquee {
+  width: 100%;
+  gap: 4rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  overflow: hidden;
+}
+.marquee_content {
+  min-width: 100%;
+  gap: 4rem;
+  flex: none;
+  justify-content: space-around;
+  display: flex;
+  animation-direction: reverse;
+  animation: scroll 10s linear infinite;
+  align-items: center;
+}
+.marquee_overflow {
+  margin-top: 1rem;
+}
+.marquee figure,
+.marquee img {
+  -webkit-transform: translateZ(0);
+  max-width: 150px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
 .tasks-items {
   justify-content: center;
   gap: 1rem;

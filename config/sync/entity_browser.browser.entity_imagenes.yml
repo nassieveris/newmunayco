@@ -1,0 +1,42 @@
+uuid: 53076ff3-8f0c-4217-bd20-ab69952c5218
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.entity_imagenes
+  module:
+    - views
+name: entity_imagenes
+label: 'Entity Imagenes'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Seleccione entidades'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  ee56e858-509c-493b-afbf-b513573de691:
+    id: media_image_upload
+    uuid: ee56e858-509c-493b-afbf-b513573de691
+    label: Subir
+    weight: -9
+    settings:
+      submit_text: 'Seleccionar los archivos'
+      upload_location: 'public://'
+      multiple: false
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+  fc4fc20d-2a4b-498b-af99-05bec5562c35:
+    id: view
+    uuid: fc4fc20d-2a4b-498b-af99-05bec5562c35
+    label: Ver
+    weight: -10
+    settings:
+      submit_text: 'Seleccione entidades'
+      auto_select: false
+      view: entity_imagenes
+      view_display: entity_browser_1

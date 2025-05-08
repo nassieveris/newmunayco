@@ -25,6 +25,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
+  entity_browser_entity_form: 0
   entity_reference_revisions: 0
   field: 0
   field_ui: 0
@@ -36,6 +37,7 @@ module:
   honeypot: 0
   image: 0
   image_style_quality: 0
+  inline_entity_form: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0

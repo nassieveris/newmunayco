@@ -1,0 +1,8 @@
+<article class="sub_block">
+  {% if paragraph.field_base_title.0.value|length > 0 %}
+    <h4 class="sub_block__title">{{ paragraph.field_base_title.value|raw }}</h4>
+  {% endif %}
+  {% if paragraph.field_base_body.0.value|length > 0 %}
+    {{ paragraph.field_base_body.value|raw }}
+  {% endif %}
+</article>

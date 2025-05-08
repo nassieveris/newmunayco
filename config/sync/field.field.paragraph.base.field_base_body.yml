@@ -1,0 +1,24 @@
+uuid: be92c94d-72f6-4702-a5cf-f254cce0b4ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_base_body
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.base
+  module:
+    - text
+id: paragraph.base.field_base_body
+field_name: field_base_body
+entity_type: paragraph
+bundle: base
+label: 'Cuerpo Base'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,41 @@
+uuid: 590a69c5-e238-4193-8a42-cd7bf1719b52
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.entity_imagenes
+  module:
+    - views
+name: entity_documentos
+label: 'Entity Documentos'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Seleccione entidades'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  41d26b4e-b995-4aff-aa1b-5f5920c9e474:
+    id: view
+    uuid: 41d26b4e-b995-4aff-aa1b-5f5920c9e474
+    label: Ver
+    weight: 1
+    settings:
+      submit_text: 'Seleccione entidades'
+      auto_select: false
+      view: entity_imagenes
+      view_display: entity_browser_2
+  7b0b9a68-d591-4e10-8a85-d88210ab958a:
+    id: upload
+    uuid: 7b0b9a68-d591-4e10-8a85-d88210ab958a
+    label: Subir
+    weight: 2
+    settings:
+      submit_text: 'Seleccionar los archivos'
+      upload_location: 'public://'
+      multiple: true
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'

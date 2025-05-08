@@ -1,0 +1,33 @@
+uuid: 891b3169-549b-4010-b772-a5cc9486d6c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - field.field.block_content.images.body
+    - field.field.block_content.images.field_basic_img
+  module:
+    - text
+id: block_content.images.default
+targetEntityType: block_content
+bundle: images
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_basic_img:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
