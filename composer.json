@@ -41,6 +41,7 @@
         "drupal/menu_link_attributes": "^1.5",
         "drupal/metatag": "^2.1",
         "drupal/module_filter": "^5.0",
+        "drupal/paragraph_view_mode": "^3.2",
         "drupal/paragraphs": "^1.19",
         "drupal/pathauto": "^1.13",
         "drupal/rabbit_hole": "dev-3516167-fix-multiple-implicit",

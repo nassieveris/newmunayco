@@ -1,0 +1,23 @@
+uuid: 99b6bdc9-e4db-49ac-b238-1cc3d8a6e24e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_base_link
+    - paragraphs.paragraphs_type.base_img
+  module:
+    - link
+id: paragraph.base_img.field_base_link
+field_name: field_base_link
+entity_type: paragraph
+bundle: base_img
+label: 'Enlace Base'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

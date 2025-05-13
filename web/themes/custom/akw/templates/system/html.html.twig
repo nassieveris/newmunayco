@@ -23,6 +23,9 @@
   {% if entity_type %}
     {% set body_classes = body_classes|merge([entity_type]) %}
   {% endif %}
+  {% if is_front %}
+    {% set body_classes = body_classes|merge(['frontpage']) %}
+  {% endif %}
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main" class="visually-hidden focusable">
       {{ 'Skip to main content'|t }}

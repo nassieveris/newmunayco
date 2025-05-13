@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.basic
     - field.storage.block_content.field_multiple_body
     - paragraphs.paragraphs_type.base
+    - paragraphs.paragraphs_type.base_img
   module:
     - entity_reference_revisions
 id: block_content.basic.field_multiple_body
@@ -23,9 +24,13 @@ settings:
   handler_settings:
     target_bundles:
       base: base
+      base_img: base_img
     negate: 0
     target_bundles_drag_drop:
       base:
         weight: 2
+        enabled: true
+      base_img:
+        weight: 4
         enabled: true
 field_type: entity_reference_revisions

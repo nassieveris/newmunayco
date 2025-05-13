@@ -944,9 +944,25 @@ tbody, td, tfoot, th, thead, tr {
   position: relative;
   z-index: 2;
 }
+.blocks.blocks__porque .btn {
+  font-size: clamp(0.75rem, 0rem + 1.3333vw, 1rem);
+}
 
+.blocks__porque .sub_block {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
 .sub_blocks {
   margin-top: 3rem;
+}
+.blocks__porque .sub_blocks {
+  background-color: #eeeed8;
+  outline: clamp(3rem, 1rem + 5.3333vw, 5rem) solid #eeeed8;
+  border-radius: 1rem;
+  gap: clamp(4rem, 1rem + 8vw, 7rem);
+  margin-top: clamp(5rem, 2rem + 8vw, 8rem);
+  text-align: left;
 }
 .sub_block__title {
   font-family: "DM Serif Text", serif;
@@ -954,6 +970,20 @@ tbody, td, tfoot, th, thead, tr {
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+}
+.frontpage .sub_block__title {
+  color: hsla(100, 51%, 40%, 0.9);
+  margin: 0;
+  font-size: clamp(1.25rem, 0.8125rem + 1.1667vw, 1.6875rem);
+  line-height: 1.1;
+}
+.sub_block__img img {
+  width: clamp(20rem, 12.5rem + 25vw, 31.25rem);
+  border-radius: 1rem;
+}
+.frontpage .sub_block p {
+  color: black;
+  margin-top: -0.5rem;
 }
 
 .marquee {
@@ -977,6 +1007,10 @@ tbody, td, tfoot, th, thead, tr {
 }
 .marquee_overflow {
   margin-top: 1rem;
+  width: clamp(18rem, -5.5183rem + 99.0244vw, 68.75rem);
+}
+.frontpage .marquee_overflow {
+  width: clamp(18rem, 6.0671rem + 50.2439vw, 43.75rem);
 }
 .marquee figure,
 .marquee img {

@@ -1,0 +1,19 @@
+uuid: 3db16429-5c5d-413f-a003-b60efe805ac5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_base_title
+    - paragraphs.paragraphs_type.base_img
+id: paragraph.base_img.field_base_title
+field_name: field_base_title
+entity_type: paragraph
+bundle: base_img
+label: 'Título Base'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
