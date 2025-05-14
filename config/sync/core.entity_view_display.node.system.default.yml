@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.system.field_col_1
     - field.field.node.system.field_col_2
     - field.field.node.system.field_hero
+    - field.field.node.system.field_img
     - field.field.node.system.field_include_banner
     - field.field.node.system.field_subtitle
     - field.field.node.system.field_summary
@@ -51,6 +52,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 118
+    region: content
+  field_img:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 111
     region: content
   field_include_banner:
     type: boolean

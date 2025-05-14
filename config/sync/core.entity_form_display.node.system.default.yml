@@ -3,16 +3,19 @@ langcode: es
 status: true
 dependencies:
   config:
+    - entity_browser.browser.entity_imagenes
     - field.field.node.system.body
     - field.field.node.system.field_col_1
     - field.field.node.system.field_col_2
     - field.field.node.system.field_hero
+    - field.field.node.system.field_img
     - field.field.node.system.field_include_banner
     - field.field.node.system.field_subtitle
     - field.field.node.system.field_summary
     - field.field.node.system.field_type_system
     - node.type.system
   module:
+    - entity_browser
     - field_group
     - paragraphs
     - path
@@ -54,6 +57,7 @@ third_party_settings:
         required_fields: true
     group_cuerpo:
       children:
+        - field_img
         - field_summary
         - field_col_1
         - field_col_2
@@ -103,7 +107,7 @@ content:
     third_party_settings: {  }
   field_col_1:
     type: text_textarea_with_summary
-    weight: 6
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -113,7 +117,7 @@ content:
     third_party_settings: {  }
   field_col_2:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -141,6 +145,20 @@ content:
         convert: '0'
         duplicate: '0'
     third_party_settings: {  }
+  field_img:
+    type: entity_browser_entity_reference
+    weight: 3
+    region: content
+    settings:
+      entity_browser: entity_imagenes
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
+    third_party_settings: {  }
   field_include_banner:
     type: boolean_checkbox
     weight: 3
@@ -158,7 +176,7 @@ content:
     third_party_settings: {  }
   field_summary:
     type: string_textarea
-    weight: 5
+    weight: 4
     region: content
     settings:
       rows: 5

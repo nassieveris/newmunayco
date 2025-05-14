@@ -47,4 +47,25 @@
     border-top: 1px solid rgba(255,255,255,.5);
     padding-top: 1rem;
   }
+  &_link {
+    color: white;
+  }
+}
+
+.footer_link {
+  color: white;
+  transition: color 0.25s ease; /* Color base para transiciones fuera del hover */
+  &:hover {
+    animation: rainbow 3s infinite;
+  }
+}
+@keyframes rainbow {
+  0%   { color: #FF0000; }
+  14%  { color: #FF7F00; }
+  28%  { color: #FFFF00; }
+  42%  { color: #00FF00; }
+  57%  { color: #0000FF; }
+  71%  { color: #4B0082; }
+  85%  { color: #8B00FF; }
+  100% { color: #FF0000; }
 }

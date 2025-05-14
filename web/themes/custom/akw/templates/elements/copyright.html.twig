@@ -1,2 +1,6 @@
 <small>{{ 'now'|date('Y') }} - © María Munayco Consulting - Lima, Perú</small>
-<small>Diseño web y página web desarrollados con ♥ por Arkyweb</small>
+{% if arkyweb %}
+<small>
+  <a class="footer_link" href="{{ arkyweb|raw }}" target="_blank">Diseño web y página web desarrollados con ♥ por Arkyweb</a>
+</small>
+{% endif %}

@@ -1,5 +1,12 @@
 {% if (is_node and node.field_summary.value) %}
-  <div class="body__summary"><p>{{ node.field_summary.value|raw }}</p></div>
+  <div class="body__summary">
+    {% if (is_node and node.field_img.value) %}
+    <img class="body__summary_img"
+      alt="{{ node.field_img.entity.field_media_image.alt }}" width="800" height="500"
+      src="{{ file_url(node.field_img.entity.field_media_image.entity.fileuri | image_style('800x500') ) }}" />
+    {% endif %}
+    <p>{{ node.field_summary.value|raw }}</p>
+  </div>
 {% endif %}
 <section class="body__cols">
 {% if (is_node and node.field_col_1.value) %}

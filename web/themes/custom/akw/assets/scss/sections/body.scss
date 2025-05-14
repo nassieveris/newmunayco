@@ -14,6 +14,20 @@
     color: #333;
     font-size: clamp(1.25rem,1.1739rem + .4348vw,1.5rem);
     text-align: justify;
+    position: relative;
+    img {
+      border-radius: 100%;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      @media (min-width: 1200px) {
+        max-width: calc(100% - 3rem);
+        position: absolute;
+        height: clamp(31.25rem, 12.5rem + 25vw, 35.9375rem);
+        bottom: 0;
+        right: -100%;
+        margin-bottom: auto;
+      }
+    }
     & + .body__article,
     & + .body__cols {
       margin-top: 1rem;
@@ -132,7 +146,7 @@
     color: hsl(147deg,100%,22%);
     border-radius: 1rem;
   }
-  img {
+  img:not(.body__summary_img) {
     border-radius: 2rem;
   }
 }
