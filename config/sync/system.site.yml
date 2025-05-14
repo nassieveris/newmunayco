@@ -6,8 +6,8 @@ name: 'Maria Munayco Consulting'
 mail: pablo.nassi@gmail.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/13
+  404: /node/12
   front: /node/8
 admin_compact_mode: false
 weight_select_max: 100

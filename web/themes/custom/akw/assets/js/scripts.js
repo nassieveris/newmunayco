@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  [handleBurgerMenu, updateMenuClasses, populateSubjectField].forEach(fn => fn());
+  [handleBurgerMenu, updateMenuClasses, populateSubjectField, scrollToTargets, handleAccordionMenu].forEach(fn => fn());
 });
 
 const handleBurgerMenu = () => {
@@ -66,4 +66,44 @@ const populateSubjectField = () => {
     subjectField.value = document.title.split('|')[0]?.trim() ?? '';
     subjectField.readOnly = true;
   }
+};
+
+const scrollToTargets = () => {
+  const cta = document.getElementById('cta');
+  if (!cta) return;
+
+    cta.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.getElementById(cta.getAttribute('href')?.slice(1));
+    if (target) window.scrollTo({
+    top: target.getBoundingClientRect().top + window.scrollY - 60,
+    behavior: 'smooth'
+    });
+  });
+};
+
+const handleAccordionMenu = () => {
+  const menu = document.getElementById('menu-servicios');
+  if (!menu) return;
+
+  menu.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const parentLi = link.closest('li');
+    if (!parentLi || !parentLi.classList.contains('acc-expanded')) return;
+
+    e.preventDefault(); // Stop link navigation
+    e.stopPropagation(); // Prevent further propagation
+
+    // Remove `acc-open` from all other `li` elements
+    menu.querySelectorAll('.acc-open').forEach(openLi => {
+      if (openLi !== parentLi) {
+        openLi.classList.remove('acc-open');
+      }
+    });
+
+    // Toggle `acc-open` on the clicked `li`
+    parentLi.classList.toggle('acc-open');
+  });
 };

@@ -1,5 +1,5 @@
 {% if not (is_node and node.field_include_banner.value) %}
-  {% set banner_class = is_view or is_taxonomy or (is_node and node.getType() in ['system', 'article']) ? 'banner__green' : 'banner__soft' %}
+  {% set banner_class = is_view or (is_node and node.getType() in ['system', 'article']) ? 'banner__green' : 'banner__soft' %}
   <section class="banner {{ banner_class }}">
     <div class="container banner_container">
       {% if (is_node and node.field_type_service.value) %}

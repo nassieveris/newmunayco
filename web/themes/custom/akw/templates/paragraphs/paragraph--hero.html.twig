@@ -1,0 +1,35 @@
+<section class="hero">
+  <div class="hero__bg">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero_title">{{ paragraph.field_hero_title.value|raw }}</h1>
+        <h2 class="hero_subtitle">{{ paragraph.field_hero_subtitle.value|raw }}</h2>
+        <p class="hero_body">{{ paragraph.field_hero_body.value|raw }}</p>
+        <div class="hero__btn">
+          {% if paragraph.field_hero_links.0.value|length > 0 %}
+            <a class="btn" href="{{ paragraph.field_hero_links.0.url }}">
+              <span>{{ paragraph.field_hero_links.0.title|raw }}</span>
+            </a>
+          {% endif %}
+          {% if paragraph.field_hero_links.1.value|length > 0 %}
+            <a id="cta" class="btn" href="{{ paragraph.field_hero_links.1.url }}">
+              <span>{{ paragraph.field_hero_links.1.title|raw }}</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="hero__images">
+        <figure class="hero__img">
+          <img
+            src="{{ file_url(paragraph.field_hero_img.0.entity.field_media_image.0.entity.fileuri | image_style('500x500')) }}"
+            alt="{{ paragraph.field_hero_img.0.entity.field_media_image.0.alt|raw }}" />
+        </figure>
+        <figure class="hero__img">
+          <img
+            src="{{ file_url(paragraph.field_hero_img.1.entity.field_media_image.0.entity.fileuri | image_style('500x500')) }}"
+            alt="{{ paragraph.field_hero_img.1.entity.field_media_image.0.alt|raw }}" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

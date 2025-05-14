@@ -20,6 +20,9 @@ settings:
     -
       value: system_consultoria
       label: Consultoria
+    -
+      value: system_generico
+      label: Genérico
   allowed_values_function: ''
 module: options
 locked: false

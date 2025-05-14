@@ -1,0 +1,8 @@
+uuid: f246486f-c337-4da4-9ef7-4534611d2a6c
+langcode: es
+status: true
+dependencies: {  }
+id: contact_email
+label: 'Correo electrónico de contacto'
+tags:
+  title: Contacto

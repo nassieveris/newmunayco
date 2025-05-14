@@ -1,0 +1,57 @@
+{% include "@akw/sections/header.html.twig" ignore missing %}
+
+<main class="main">
+
+  <section class="banner banner__green">
+    <div class="container banner_container">
+      <h1 class="title" id="title">Contacta con María Munayco Consulting</h1>
+      <h2 class="title-sub">
+        <span>Le contestaremos prontamente.</span>
+      </h2>
+    </div>
+  </section>
+
+  {% if logged_in %}
+  <div class="main-logged-in container">
+    {% if page.primary_menu %}
+      {{ page.primary_menu }}
+    {% endif %}
+    {% if page.secondary_menu %}
+      {{ page.secondary_menu }}
+    {% endif %}
+
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endif %}
+
+    {% if page.featured %}
+      {{ page.featured }}
+    {% endif %}
+
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="body">
+    <div class="container body__container">
+      <article class="body__article">
+        {{ drupal_entity('block_content', 4) }}
+      </article>
+      <article class="body__article">
+        {{ page.content }}
+        <small class="form_small">Todos los campos son obligatorios.</small>
+        <small class="form_small">Los datos enviados no se recopilaran para marketing o estudio.</small>
+        <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta <a href="{{ drupal_url('terminos-politicas-sitio')}}">nuestros Términos y Políticas</a></small>
+      </article>
+    </div>
+  </div>
+
+</main>
+
+{% include "@akw/sections/footer.html.twig" ignore missing %}
+
+{% include "@akw/sections/burger.html.twig" ignore missing %}
+
+{% include "@akw/elements/wsp.html.twig" ignore missing %}

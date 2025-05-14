@@ -8,16 +8,19 @@
 @use 'sections/burger' as burger;
 @use 'sections/banner' as banner;
 @use 'sections/hero' as hero;
+@use 'sections/acc' as acc;
 @use 'sections/body' as body;
 
 @use 'components/forms' as forms;
 @use 'components/share' as share;
 @use 'components/teaser' as tea;
+@use 'components/messages' as msg;
 
 @use 'elements/title' as title;
 @use 'elements/buttons' as btns;
 @use 'elements/badge' as badge;
 @use 'elements/tables' as tables;
+@use 'elements/wsp' as wsp;
 
 @use 'blocks/munayco' as munayco;
 

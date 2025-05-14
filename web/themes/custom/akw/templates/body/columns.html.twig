@@ -3,7 +3,7 @@
 
       {% if (is_node and node.getType() in ['services']) %}
       <aside class="body_first" role="complementary">
-        I WANT YOU
+        {% include "@akw/sections/menuacc.html.twig" ignore missing %}
       </aside>
       {% endif %}
 
@@ -22,7 +22,7 @@
           {{ drupal_entity('contact_form', 'feedback') }}
           <small class="form_small">Todos los campos son obligatorios.</small>
           <small class="form_small">Los datos enviados no se recopilaran para marketing o estudio.</small>
-          <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta nuestros Términos y Políticas</small>
+          <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta <a href="{{ drupal_url('terminos-politicas-sitio')}}">nuestros Términos y Políticas</a></small>
         </div>
       </aside>
 

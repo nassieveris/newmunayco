@@ -56,6 +56,9 @@
     max-width: 600px;
     line-height: 1.1;
   }
+  &__btn {
+    margin-top: 2rem;
+  }
   & .btn {
     margin-top: 0;
     font-size: clamp(1.125rem, 0.5625rem + 1vw, 1.3125rem);
@@ -72,10 +75,91 @@
   &__logos {
     padding-top: 10vh;
     padding-bottom: 5vh;
+    .frontpage & {
+      @media (max-width: 899px) {
+        padding-top: 5vh;
+        padding-bottom: 0;
+      }
+      @media (min-width: 900px) {
+        margin-top: -9vw;
+        z-index: 2;
+        position: relative;
+      }
+      & .container {
+        width: auto;
+        padding-top: 1.5rem;
+        background-color: white;
+        overflow: hidden;
+        @media (min-width: 900px) {
+          max-width: fit-content;
+          box-shadow: 0 .5625rem 1.125rem 0 rgba(0,0,0,.2);
+          border-radius: 10rem;
+        }
+      }
+      & .blocks__title {
+        font-family: "DM Sans", serif;
+        text-transform: uppercase;
+        color: #999;
+        font-size: 16px;
+        border-width: 1px;
+        & > span {
+          border-width: 1px;
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
   }
   &__consultoria,
   &__maria {
     background-image: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 85%, rgba(230, 230, 230, 1) 100%);
+  }
+  &__servicios {
+    clip-path: polygon(100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%, 50% 0%);
+    background-image: radial-gradient(#ccc 0.8px, transparent 0.8px), radial-gradient(#ccc 0.8px, #f7f5f2 0.8px);
+    background-color: #f7f5f2;
+    background-position: 0 0,16px 16px;
+    background-size: 32px 32px;
+    counter-reset: apps;
+    .views-element-container {
+      margin-top: 3rem;
+      counter-reset: numerics;
+    }
+    .item-list {
+      background-color: rgba(0,0,0,.05);
+      padding: 1rem;
+      min-height: 210px;
+      border-radius: 1rem;
+      h3 a {
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        color: hsla(100, 51%, 40%, 0.9);
+        font-size: clamp(1.125rem, 0.75rem + 1vw, 1.5rem);
+        display: inline-flex;
+        margin-bottom: 1rem;
+        &::before {
+          content: counter(numerics, upper-roman) ". ";
+          padding-right: .25rem;
+          counter-increment: numerics;
+        }
+      }
+      .fila {
+        display: block;
+        line-height: 1.05;
+        a {
+          color: darkolivegreen;
+          font-size: clamp(0.8125rem, 0.625rem + 0.5vw, 1rem);
+          &::before {
+            content: counter(apps) ". ";
+            counter-increment: apps;
+          }
+        }
+        &:not(:first-child) {
+          margin-top: .5rem;
+        }
+      }
+    }
   }
   .btn::after {
     z-index: 0;
@@ -98,12 +182,26 @@
   &s{
     margin-top: 3rem;
     .blocks__porque & {
-      background-color: #eeeed8;
-      outline: clamp(3rem, 1rem + 5.3333vw, 5rem) solid #eeeed8;
+      background-color: #f7f5f2;
+      outline: clamp(3rem, 1rem + 5.3333vw, 5rem) solid #f7f5f2;
       border-radius: 1rem;
       gap: clamp(4rem, 1rem + 8vw, 7rem);
       margin-top: clamp(5rem, 2rem + 8vw, 8rem);
       text-align: left;
+      position: relative;
+      &::after {
+        content: '';
+        width: 1px;
+        position: absolute;
+        height: 100%;
+        background: #ddd;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (max-width: 899px) {
+          display: none;
+        }
+      }
     }
   }
   &__title {
@@ -139,6 +237,27 @@
   padding-bottom: 2rem;
   display: flex;
   overflow: hidden;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    width: 3rem;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  &::after {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  }
+  .frontpage & {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
   &_content {
     min-width: 100%;
     gap: 4rem;
@@ -146,7 +265,7 @@
     justify-content: space-around;
     display: flex;
     animation-direction: reverse;
-    animation: scroll 10s linear infinite;
+    animation: scroll 30s linear infinite;
     align-items: center;
   }
   &_overflow {
@@ -154,6 +273,7 @@
     width: clamp(18rem, -5.5183rem + 99.0244vw, 68.75rem);
     .frontpage & {
       width: clamp(18rem, 6.0671rem + 50.2439vw, 43.75rem);
+      margin-top: .5rem;
     }
   }
   figure,

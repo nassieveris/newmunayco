@@ -5,6 +5,7 @@
     display: flex;
     flex-flow: row wrap;
     gap: clamp(1rem, -2rem + 5.3333vw, 2rem);
+    position: relative;
     .node_article & {
       gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
     }
@@ -25,6 +26,12 @@
   }
   &__article {
     text-align: justify;
+    .entity_contact_form & {
+      flex: 1;
+      @media (max-width: 899px) {
+        flex: 100%;
+      }
+    }
     & > :not(:first-child) {
       margin-top: 1rem;
     }
@@ -45,11 +52,23 @@
         background-color: hsl(147, 100%, 22%);
       }
     }
+    a {
+      color: hsl(147deg,100%,22%);
+    }
     .body__cols & {
       @media (min-width: 1200px) {
         flex: 1;
       }
     }
+  }
+  &__generico {
+    text-align: center;
+    max-width: 100%;
+    margin-inline: 10vw;
+    width: 100%;
+  }
+  &__img {
+    margin-block: 1rem;
   }
   &__cols {
     display: flex;
@@ -58,14 +77,34 @@
   }
   &_content {
     flex: 2.5;
+    @media (max-width: 899px) {
+      flex: 100%;
+    }
   }
   &_first {
-    flex: .75;
-    order: -1
+    flex: 100%;
+    order: 1;
+    @media (min-width: 900px) {
+      flex: .75;
+      order: -1;
+      position: sticky;
+      align-self: flex-start;
+      top: 80px;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
   }
   &_second {
-    flex: 1;
-    order: 1;
+    flex: 100%;
+    @media (min-width: 900px) {
+      flex: 1;
+      order: 2;
+      position: sticky;
+      align-self: flex-start;
+      top: 80px;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
   }
   h3, h4, h5, h6 {
     font-family: "DM Serif Text", serif;

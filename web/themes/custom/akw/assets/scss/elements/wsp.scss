@@ -1,0 +1,42 @@
+.wsp {
+  -webkit-animation: wsp 1s infinite;
+  animation: wsp 1s infinite;
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  z-index:501;
+  background-color:#39c040;
+  color:#fff;
+  width:2.5rem;
+  height:2.5rem;
+  line-height:3.5rem;
+  text-align:center;
+  border-radius:50%;
+  outline:4px solid #fff;
+  &::before {
+    content:"";
+    border-left:10px solid #fff;
+    border-top:10px solid transparent;
+    width:1px;
+    height:1px;
+    position:absolute;
+    bottom:0;
+    left:-3px;
+    border-radius:0 0 0 4px;
+    -webkit-transform:rotate(5deg);
+    transform:rotate(5deg);
+  }
+  span {
+    font-size:30px;
+  }
+}
+@keyframes wsp {
+  0% {
+    -webkit-box-shadow:0 0 0 0 rgba(0,0,0,.2);
+    box-shadow:0 0 0 0 rgba(0,0,0,.2)
+  }
+  100% {
+    -webkit-box-shadow:0 0 0 35px transparent;
+    box-shadow:0 0 0 35px transparent
+  }
+}

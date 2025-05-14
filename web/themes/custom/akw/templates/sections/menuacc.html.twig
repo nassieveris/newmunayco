@@ -1,0 +1,39 @@
+{% macro serviciosMacro(menu, level) -%}
+{% import _self as macros %}
+{% set servicios_level = 0 %}
+{% if menu %}
+  {% if level == 0 %}
+    <ul id="menu-servicios" class="servicios-nav-{{ level|default(servicios_level) }}">
+  {% else %}
+    <ul class="servicios-subnav-{{ level|default(servicios_level) }}">
+  {% endif %}
+{% for servicios_item in menu %}
+  {% set servicios_active = (servicios_item.active) ? ' is-active' : '' %}
+  {% set li_classes = servicios_active %}
+  {% if servicios_item.active_trail %}
+    {% set li_classes = li_classes ~ ' is-active-trail acc-open' %}
+  {% endif %}
+  {% if servicios_item.submenu %}
+    {% set li_classes = li_classes ~ ' acc-expanded' %}
+  {% endif %}
+  {% if level == 0 %}
+    <li class='servicios-nav-item{{ li_classes }}'>
+    <a href="{{ servicios_item.url }}" class='servicios-nav-link{{ servicios_active }} acc-title'>{{ servicios_item.text }}</a>
+  {% else %}
+    <li class='servicios-subnav-item{{ li_classes }}'>
+    <a href="{{ servicios_item.url }}" class='servicios-subnav-link{{ servicios_active }}'>{{ servicios_item.text }}</a>
+  {% endif %}
+      {% if servicios_item.submenu %}
+      <div class="acc-content">
+      {{ _self.serviciosMacro(servicios_item.submenu, level|default(servicios_level) + 1) }}
+      </div>
+      {% endif %}
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
+{%- endmacro %}
+
+{% import _self as macros %}
+{% set servicios_items = simplify_menu('main') %}
+{{ macros.serviciosMacro(servicios_items.menu_tree) }}

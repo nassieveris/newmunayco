@@ -1,0 +1,26 @@
+uuid: f3f0a6e3-9aad-4deb-9226-4f2ff58e3135
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.system
+  module:
+    - text
+id: node.system.body
+field_name: body
+entity_type: node
+bundle: system
+label: Cuerpo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

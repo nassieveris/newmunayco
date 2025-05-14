@@ -6,6 +6,14 @@
     </article>
   </div>
 </div>
+{% elseif node.field_type_system.value in ['system_generico'] %}
+<div class="body">
+  <div class="container body__container">
+    <article class="body__article body__generico">
+      {{ node.body.value|raw }}
+    </article>
+  </div>
+</div>
 {% endif %}
 {% if node.field_type_system.value == 'system_bio' %}
   {{ munayco_2consultoria }}
@@ -14,6 +22,7 @@
   {% include "@akw/blocks/logos.html.twig" ignore missing %}
   {{ munayco_2maria }}
 {% elseif node.field_type_system.value == 'system_home' %}
+  {{ drupal_field('field_hero', 'node', 8) }}
   {% include "@akw/blocks/logos.html.twig" ignore missing %}
   {% include "@akw/blocks/servicios.html.twig" ignore missing %}
   {% include "@akw/blocks/porque.html.twig" ignore missing %}
