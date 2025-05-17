@@ -4,7 +4,7 @@
 
  $settings['config_sync_directory'] = '../config/sync';
 
- $settings['hash_salt'] = '';
+ $settings['hash_salt'] = 'bb12c9cae5dafe2931f7e14a819177804bc6d133fddd788a8ae4e73222f8e8fb';
 
  $settings['update_free_access'] = FALSE;
 
