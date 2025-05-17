@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.system.field_hero
     - field.field.node.system.field_img
     - field.field.node.system.field_include_banner
+    - field.field.node.system.field_metatag
     - field.field.node.system.field_subtitle
     - field.field.node.system.field_summary
     - field.field.node.system.field_type_system
@@ -17,6 +18,7 @@ dependencies:
   module:
     - entity_browser
     - field_group
+    - metatag
     - paragraphs
     - path
     - text
@@ -165,6 +167,14 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 27
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_subtitle:
     type: string_textfield

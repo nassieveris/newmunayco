@@ -80,6 +80,35 @@ function akw_preprocess(array &$variables, $hook) {
   $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 }
 
+function akw_preprocess_html(&$variables) {
+  $variables['#attached']['html_head_link'][] = [
+    [
+      'rel' => 'preload',
+      'href' => '/themes/custom/akw/assets/css/styles.css',
+      'as' => 'style',
+      'onload' => "this.rel='stylesheet'"
+    ],
+    'styles_preload',
+  ];
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+
+  // Verificar si la página es "contactenos"
+  if ($alias === 'contactenos') {
+    $variables['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'Contacto | María Munayco Consulting',
+          'content' => 'Descripción personalizada para la página de contacto.',
+        ],
+      ],
+      'metatag_description_contact',
+    ];
+  }
+}
+
 
 /**
  * Implements hook_preprocess_page().

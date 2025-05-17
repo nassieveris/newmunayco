@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.system.field_hero
     - field.field.node.system.field_img
     - field.field.node.system.field_include_banner
+    - field.field.node.system.field_metatag
     - field.field.node.system.field_subtitle
     - field.field.node.system.field_summary
     - field.field.node.system.field_type_system
@@ -41,6 +42,7 @@ hidden:
   field_hero: true
   field_img: true
   field_include_banner: true
+  field_metatag: true
   field_subtitle: true
   field_summary: true
   field_type_system: true

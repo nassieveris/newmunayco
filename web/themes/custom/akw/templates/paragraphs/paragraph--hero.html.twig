@@ -20,12 +20,12 @@
       </div>
       <div class="hero__images">
         <figure class="hero__img">
-          <img
+          <img width="500" height="500" loading="lazy"
             src="{{ file_url(paragraph.field_hero_img.0.entity.field_media_image.0.entity.fileuri | image_style('500x500')) }}"
             alt="{{ paragraph.field_hero_img.0.entity.field_media_image.0.alt|raw }}" />
         </figure>
         <figure class="hero__img">
-          <img
+          <img width="500" height="500" loading="lazy"
             src="{{ file_url(paragraph.field_hero_img.1.entity.field_media_image.0.entity.fileuri | image_style('500x500')) }}"
             alt="{{ paragraph.field_hero_img.1.entity.field_media_image.0.alt|raw }}" />
         </figure>

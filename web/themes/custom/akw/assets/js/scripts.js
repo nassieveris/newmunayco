@@ -93,17 +93,15 @@ const handleAccordionMenu = () => {
     const parentLi = link.closest('li');
     if (!parentLi || !parentLi.classList.contains('acc-expanded')) return;
 
-    e.preventDefault(); // Stop link navigation
-    e.stopPropagation(); // Prevent further propagation
+    e.preventDefault();
+    e.stopPropagation();
 
-    // Remove `acc-open` from all other `li` elements
     menu.querySelectorAll('.acc-open').forEach(openLi => {
       if (openLi !== parentLi) {
         openLi.classList.remove('acc-open');
       }
     });
 
-    // Toggle `acc-open` on the clicked `li`
     parentLi.classList.toggle('acc-open');
   });
 };

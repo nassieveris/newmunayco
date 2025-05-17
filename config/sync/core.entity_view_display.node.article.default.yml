@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_document
     - field.field.node.article.field_image
     - field.field.node.article.field_img
+    - field.field.node.article.field_metatag
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - image.style.wide
@@ -16,6 +17,7 @@ dependencies:
   module:
     - comment
     - image
+    - metatag
     - text
     - user
 _core:
@@ -69,6 +71,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 111
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
     region: content
   field_summary:
     type: basic_string

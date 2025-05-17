@@ -3,4 +3,4 @@ global:
     assets/js/min/scripts.js: { weight: -25, attributes: { defer: true } }
   css:
     layout:
-      assets/css/styles.css: { weight: 0 }
+      assets/css/styles.css: { weight: 0, preprocess: false }

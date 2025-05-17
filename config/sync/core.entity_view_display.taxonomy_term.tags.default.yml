@@ -1,0 +1,31 @@
+uuid: 41308586-4bda-4762-b41d-964aa43c437d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tags.field_tx_metatag
+    - taxonomy.vocabulary.tags
+  module:
+    - metatag
+    - text
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tx_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

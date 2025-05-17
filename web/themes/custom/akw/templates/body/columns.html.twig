@@ -14,15 +14,13 @@
       <aside id="asesoria" class="body_second" role="complementary">
         <div class="form__container">
           {% if (is_node and node.getType() in ['services']) %}
-          <h3 class="form_title">¿Buscas asesoría sobre {{ page['#title'] }}?</h3>
+          <p class="form_title">¿Buscas asesoría sobre {{ page['#title'] }}?</p>
           {% else %}
-          <h3 class="form_title">¿Buscas asesoría?</h3>
+          <p class="form_title">¿Buscas asesoría?</p>
           {% endif %}
           <p class="form_text">Envíanos tus datos, te responderemos pronto.</p>
           {{ drupal_entity('contact_form', 'feedback') }}
-          <small class="form_small">Todos los campos son obligatorios.</small>
-          <small class="form_small">Los datos enviados no se recopilaran para marketing o estudio.</small>
-          <small class="form_small">Al dar click en <u>"Enviar"</u>, usted acepta <a href="{{ drupal_url('terminos-politicas-sitio')}}">nuestros Términos y Políticas</a></small>
+          {% include "@akw/elements/callterminos.html.twig" ignore missing %}
         </div>
       </aside>
 

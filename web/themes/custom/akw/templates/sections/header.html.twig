@@ -2,7 +2,7 @@
   <div class="container flex header__container">
     {% set logo_tag = is_front ? 'h1' : 'div' %}
     <{{ logo_tag }} id="logo" class="logo">
-        <a class="logo_link" href="{{ path('<front>') }}">
+        <a class="logo_link" href="{{ path('<front>') }}" title="María Munayco Consulting">
           {% if isotipo %}
             {{ isotipo|raw }}
           {% endif %}

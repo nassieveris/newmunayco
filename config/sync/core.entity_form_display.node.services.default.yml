@@ -6,11 +6,13 @@ dependencies:
     - entity_browser.browser.entity_imagenes
     - field.field.node.services.body
     - field.field.node.services.field_background
+    - field.field.node.services.field_metatag
     - field.field.node.services.field_summary
     - field.field.node.services.field_type_service
     - node.type.services
   module:
     - entity_browser
+    - metatag
     - path
     - text
 id: node.services.default
@@ -41,6 +43,14 @@ content:
       open: false
       field_widget_display_settings: {  }
       selection_mode: selection_append
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 27
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_summary:
     type: string_textarea

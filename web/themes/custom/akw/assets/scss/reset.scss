@@ -30,10 +30,15 @@ h1, h2, h3, h4, h5, strong, b {
   font-weight: bold;
   color: #2E404D;
 }
-
+h1 {
+  font-size: 1.5em;
+}
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   hyphens: auto;
+}
+h1, h2, h3, h4, h5, h6, p, span, small {
+  text-shadow: 1px 1px 80px rgba(0, 0, 0, .05);
 }
 
 small {

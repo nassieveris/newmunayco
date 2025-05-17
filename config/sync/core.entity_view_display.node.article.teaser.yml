@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_document
     - field.field.node.article.field_image
     - field.field.node.article.field_img
+    - field.field.node.article.field_metatag
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - image.style.medium
@@ -58,5 +59,6 @@ hidden:
   comment: true
   field_document: true
   field_img: true
+  field_metatag: true
   field_summary: true
   langcode: true

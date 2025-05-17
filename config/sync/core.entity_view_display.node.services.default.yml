@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.services.body
     - field.field.node.services.field_background
+    - field.field.node.services.field_metatag
     - field.field.node.services.field_summary
     - field.field.node.services.field_type_service
     - node.type.services
   module:
+    - metatag
     - text
     - user
 id: node.services.default
@@ -31,6 +33,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 113
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
     region: content
   field_summary:
     type: basic_string

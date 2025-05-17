@@ -25,7 +25,7 @@
       {% endif %}
       {% if (is_node and node.field_background.value) %}
       <img class="banner__background"
-        alt="{{ node.field_background.entity.field_media_image.alt }}" width="960" height="420"
+        alt="{{ node.field_background.entity.field_media_image.alt }}" width="960" height="420" loading="lazy"
         src="{{ file_url(node.field_background.entity.field_media_image.entity.fileuri | image_style('960x420') ) }}" />
       {% endif %}
     </div>

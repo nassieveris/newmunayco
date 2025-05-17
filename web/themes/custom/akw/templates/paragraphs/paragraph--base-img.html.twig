@@ -1,7 +1,7 @@
 <article class="sub_block">
   {% if paragraph.field_base_img.0.value|length > 0 %}
     <div class="sub_block__img">
-      <img
+      <img width="500" height="300" loading="lazy"
       src="{{ file_url(paragraph.field_base_img.entity.field_media_image.entity.fileuri | image_style('500x300')) }}"
       alt="{{ paragraph.field_base_img.entity.field_media_image.0.alt|raw }}" />
     </div>

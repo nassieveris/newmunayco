@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.system.field_hero
     - field.field.node.system.field_img
     - field.field.node.system.field_include_banner
+    - field.field.node.system.field_metatag
     - field.field.node.system.field_subtitle
     - field.field.node.system.field_summary
     - field.field.node.system.field_type_system
     - node.type.system
   module:
     - entity_reference_revisions
+    - metatag
     - options
     - text
     - user
@@ -71,6 +73,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 116
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
     region: content
   field_subtitle:
     type: string
