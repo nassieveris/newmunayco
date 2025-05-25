@@ -140,6 +140,7 @@
         font-size: clamp(1.125rem, 0.75rem + 1vw, 1.5rem);
         display: inline-flex;
         margin-bottom: 1rem;
+        line-height: 1;
         &::before {
           content: counter(numerics, upper-roman) ". ";
           padding-right: .25rem;
@@ -176,7 +177,7 @@
           }
         }
         &:not(:first-child) {
-          margin-top: .5rem;
+          margin-top: 1.25rem;
         }
       }
     }

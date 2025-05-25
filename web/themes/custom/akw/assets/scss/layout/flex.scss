@@ -20,6 +20,7 @@
   display: flex;
   flex-flow: row wrap;
   gap: clamp(1rem, -5rem + 10.6667vw, 3rem);
+  justify-content: center;
 }
 .cols- {
   &2 > * {
@@ -28,7 +29,8 @@
     max-width: calc(50% - clamp(1rem,-5rem + 10.6667vw,3rem));
     @media (max-width: 599px) {
       flex: 100%;
-      min-width: none;
+      min-width: fit-content;
+      max-width: inherit;
     }
   }
   &3 > * {
@@ -37,16 +39,22 @@
     max-width: calc(33.3333% - clamp(1rem,-5rem + 10.6667vw,3rem));
     @media (max-width: 699px) {
       flex: 100%;
-      min-width: none;
+      min-width: fit-content;
+      max-width: inherit;
     }
   }
   &4 > * {
     flex: 1;
     min-width: calc(25% - clamp(1rem,-5rem + 10.6667vw,3rem));
     max-width: calc(25% - clamp(1rem,-5rem + 10.6667vw,3rem));
+    @media (max-width: 999px) {
+      min-width: calc(33.3333% - clamp(1rem,-5rem + 10.6667vw,3rem));
+      max-width: calc(33.3333% - clamp(1rem,-5rem + 10.6667vw,3rem));
+    }
     @media (max-width: 799px) {
       flex: 100%;
-      min-width: none;
+      min-width: fit-content;
+      max-width: inherit;
     }
   }
 }
