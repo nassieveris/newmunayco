@@ -10,7 +10,7 @@ dependencies:
     - media
     - user
 id: entity_imagenes
-label: 'Entity Imagenes'
+label: 'Entidades Media'
 module: views
 description: ''
 tag: ''
@@ -382,6 +382,7 @@ display:
     display_plugin: entity_browser
     position: 3
     display_options:
+      title: 'Entity Documentos'
       fields:
         entity_browser_select:
           id: entity_browser_select
@@ -495,6 +496,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         fields: false
         filters: false
         filter_groups: false

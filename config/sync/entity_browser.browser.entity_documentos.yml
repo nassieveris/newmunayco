@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.entity_imagenes
   module:
+    - entity_browser_entity_form
     - views
 name: entity_documentos
 label: 'Entity Documentos'
@@ -29,13 +30,13 @@ widgets:
       auto_select: false
       view: entity_imagenes
       view_display: entity_browser_2
-  7b0b9a68-d591-4e10-8a85-d88210ab958a:
-    id: upload
-    uuid: 7b0b9a68-d591-4e10-8a85-d88210ab958a
+  9883be3e-335c-4809-a724-0f186bc99da6:
+    id: entity_form
+    uuid: 9883be3e-335c-4809-a724-0f186bc99da6
     label: Subir
     weight: 2
     settings:
-      submit_text: 'Seleccionar los archivos'
-      upload_location: 'public://'
-      multiple: true
-      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      submit_text: 'Guardar entidad'
+      entity_type: media
+      bundle: document
+      form_mode: default
