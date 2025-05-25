@@ -9,6 +9,20 @@
   border-radius: 1rem 1rem 0 0;
   border-bottom: 1px solid #dadada;
   transition: .25s background-color;
+  height: 100%;
+  &__img {
+    flex: 100%;
+    overflow: hidden;
+    margin-bottom: -1rem;
+    border-radius: 1rem;
+    img {
+      border-radius: 1rem;
+      transition: .25s transform;
+    }
+  }
+  &:hover img {
+    transform: scale(1.05) translateX(-.5rem) translateY(-.5rem);
+  }
   &__data {
     flex: 2;
     color: #787979;

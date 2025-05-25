@@ -24,20 +24,29 @@
 .cols- {
   &2 > * {
     flex: 1;
+    min-width: calc(50% - clamp(1rem,-5rem + 10.6667vw,3rem));
+    max-width: calc(50% - clamp(1rem,-5rem + 10.6667vw,3rem));
     @media (max-width: 599px) {
       flex: 100%;
+      min-width: none;
     }
   }
   &3 > * {
     flex: 1;
+    min-width: calc(33.3333% - clamp(1rem,-5rem + 10.6667vw,3rem));
+    max-width: calc(33.3333% - clamp(1rem,-5rem + 10.6667vw,3rem));
     @media (max-width: 699px) {
       flex: 100%;
+      min-width: none;
     }
   }
   &4 > * {
     flex: 1;
+    min-width: calc(25% - clamp(1rem,-5rem + 10.6667vw,3rem));
+    max-width: calc(25% - clamp(1rem,-5rem + 10.6667vw,3rem));
     @media (max-width: 799px) {
       flex: 100%;
+      min-width: none;
     }
   }
 }

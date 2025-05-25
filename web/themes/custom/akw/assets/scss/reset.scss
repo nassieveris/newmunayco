@@ -90,6 +90,12 @@ input, button, textarea, select {
   display: none;
 }
 
+.contextual {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .akw {
   display: flex;
   flex-flow: column wrap;

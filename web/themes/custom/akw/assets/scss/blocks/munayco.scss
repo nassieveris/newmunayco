@@ -198,6 +198,9 @@
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
+    @media (min-width: 599px) {
+      min-width: calc(50% - clamp(4rem, 1rem + 8vw, 7rem));
+    }
   }
   &s{
     margin-top: 3rem;

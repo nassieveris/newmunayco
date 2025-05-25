@@ -208,7 +208,9 @@ display:
     position: 1
     display_options:
       defaults:
+        css_class: false
         header: false
+      css_class: 'all_news cols_2'
       header: {  }
       display_extenders:
         metatag_display_extender:

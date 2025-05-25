@@ -6,7 +6,7 @@
 {% endif %}
 {% if (is_node and node.field_img.value) %}
   <figure class="body__img">
-    <img width="1600" height="100" loading="lazy"
+    <img width="1600" height="1000" loading="lazy"
       src="{{ file_url(node.field_img.entity.field_media_image.entity.fileuri | image_style('1600x1000')) }}"
       alt="{{ node.field_img.entity.field_media_image.0.alt|raw }}" />
   </figure>

@@ -1,0 +1,29 @@
+uuid: bbf85cdb-6f7a-451b-8dc1-8eb8ce40cfa5
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: 600x300
+label: 600x300
+effects:
+  0254c2dd-7e83-4f80-801b-bb5d797c3eed:
+    uuid: 0254c2dd-7e83-4f80-801b-bb5d797c3eed
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 300
+      anchor: center-center
+  a7b8a3f8-da84-498f-868a-0409a3f94308:
+    uuid: a7b8a3f8-da84-498f-868a-0409a3f94308
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
+  3e4781d9-9e4d-47b1-bc4e-443c1d1eb80c:
+    uuid: 3e4781d9-9e4d-47b1-bc4e-443c1d1eb80c
+    id: image_style_quality
+    weight: 3
+    data:
+      quality: 100

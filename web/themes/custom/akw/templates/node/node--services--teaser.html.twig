@@ -1,4 +1,9 @@
 <a href="{{ url }}" class="teaser">
+  <figure class="teaser__img">
+    <img width="600" height="300" loading="lazy"
+      src="{{ file_url(node.field_img.entity.field_media_image.entity.fileuri | image_style('600x300')) }}"
+      alt="{{ node.field_img.entity.field_media_image.0.alt|raw }}" />
+  </figure>
   <div class="teaser__data">
     <h3 class="teaser_title">{{ node.title.value }}</h3>
   </div>
