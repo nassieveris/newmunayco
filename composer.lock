@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6193bad6a221e50fd372a04142971e1",
+    "content-hash": "f8b540ef5b59bf41f3c4976c8fe97073",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2355,6 +2355,51 @@
             "homepage": "https://www.drupal.org/project/jquery_ui_menu",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui_menu"
+            }
+        },
+        {
+            "name": "drupal/login_switch",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/login_switch.git",
+                "reference": "3.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/login_switch-3.1.1.zip",
+                "reference": "3.1.1",
+                "shasum": "92ee53598092ae63cf21e9d3fac421c48f91b59e"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.1",
+                    "datestamp": "1745506993",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Sherman",
+                    "homepage": "https://www.drupal.org/user/3431259",
+                    "email": "matthewsherman25@gmail.com"
+                }
+            ],
+            "description": "Secure the default login route in Drupal 8",
+            "homepage": "https://www.drupal.org/project/login_switch",
+            "support": {
+                "source": "https://git.drupalcode.org/project/login_switch"
             }
         },
         {
