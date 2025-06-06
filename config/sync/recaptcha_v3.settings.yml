@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: 6xvuojdlZ8-8Q7yJyRldPaE0UK_YijOlDo6HvURmW_E
+langcode: es
+site_key: 6Lehs1UrAAAAAG9iHFmRk7iujy9yXN7giVRZFv6Y
+secret_key: 6Lehs1UrAAAAAF_QrWyXxS6R7dxFotXLYdiPW7bY
+hide_badge: false
+verify_hostname: true
+default_challenge: ''
+error_message: 'Anti-bot verification failed.'
+cacheable: false
+library_use_recaptcha_net: false

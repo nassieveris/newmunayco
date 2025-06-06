@@ -1,0 +1,13 @@
+id: page_not_found
+uuid: ecf6dea2-a6f1-4e8e-bbf0-727bfd0bc4ad
+type: 'page not found'
+message: '%page not found%|%404%'
+referer: ''
+threshold: '3'
+window: '1 hour ago'
+provider: ban
+user_type: '1'
+rule_type: 1
+langcode: es
+status: true
+dependencies: {  }

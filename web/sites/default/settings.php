@@ -16,7 +16,7 @@
  $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
   $settings['trusted_host_patterns'] = [
-      '^45\\.61\\.60\\.195$',  // IP del servidor
+      '^79\\.143\\.89\\.43$',  // IP del servidor
       '^munayco\\.com\\.pe$',  // Dominio principal
       '^www\\.munayco\\.com\\.pe$',  // Subdominio www
   ];
@@ -39,9 +39,9 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 }*/
 
 $databases['default']['default'] = array (
-  'database' => 'munaycobbdd',
-  'username' => 'munaycouser',
-  'password' => 'munaycopass',
+  'database' => 'munayco_ddbb',
+  'username' => 'munayco_user',
+  'password' => 'munayco_pass',
   'prefix' => '',
   'host' => '127.0.0.1',
   'port' => '3306',

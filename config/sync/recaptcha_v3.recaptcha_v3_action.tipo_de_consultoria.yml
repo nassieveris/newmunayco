@@ -1,0 +1,8 @@
+uuid: 72769f8f-6116-4bb1-8411-52fc2136462b
+langcode: es
+status: true
+dependencies: {  }
+id: tipo_de_consultoria
+label: 'Tipo de Consultoria'
+threshold: 0.7
+challenge: default

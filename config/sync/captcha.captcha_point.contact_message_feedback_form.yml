@@ -1,0 +1,7 @@
+uuid: 246e3d81-ed49-4de7-b28a-668a8ab1c40b
+langcode: es
+status: true
+dependencies: {  }
+formId: contact_message_feedback_form
+captchaType: recaptcha_v3/tipo_de_consultoria
+label: contact_message_feedback_form
